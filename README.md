@@ -44,10 +44,10 @@ Ver archivo INSTALL
 Versiones
 Ver archivo CHANGELOG
 
-Idea / Desarroladores : 
- 		Jose Julian Buda <julytoccr@yahoo.com>
-		David Labra Gaona <davidlabragaona@gmail.com>
+Idea / Desarroladores:
+	Jose Julian Buda <julytoccr@yahoo.com>
+	David Labra Gaona <davidlabragaona@gmail.com>
 
 Colaboradores (esperemos que aumente la cantidad):
-		Matias Noriega
-		Marcelo Cuello
+	Matias Noriega
+	Marcelo Cuello
