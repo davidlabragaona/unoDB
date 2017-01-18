@@ -1,0 +1,48 @@
+2.0.0(16/01/17)
+Modificacion
+-Primera release de la version 2
+-Se implemento el mutithreading en el servidor para el manejo de las conexiones entrantes.
+-Se quito momentaneamente la sentencia "bajarservidor", solo cierra la sesion actual del cliente, para salir del 
+servidor por ahora "ctrl+c" donde esta corriendo. :) 
+-Se modifico el Makefile para compilar con threads y se creo "make clean" para borrar los ejecutables
+-Quedo sin funcionar el parser debido a que en la version con procesos y por comodidad, chequear_consulta() modificaba
+ una variable global y devolvia al cliente la respuesta, con multithread esto no es posible.
+
+1.0.4(09/01/17)
+Agregado
+-Se agrego en general.h la constante VERSION con su valor correspondiente
+-Se agrego bannerDeBienvenida() al arrancar el servidor
+Modificacion
+-Se acomodaron los headers y archivos fuentes, y se modifico el makefile para que compile acorde a estos cambios
+
+
+1.0.3(22-11-2016)
+Correciones
+-Se modifico el cliente porque permitia enviar consultas vacias al servidor y se colgaba, ya no.
+Agregados
+-Se agrego un bosquejo del parser que procesara las consultas(include/parser.h), responde a los comandos "listar * de tabla" y borrar de tabla",no ejecuta , solo devuelve al cliente el menajese ejecucion.
+-Se acomodaron los archivos del proyecto en directorios.
+-Se creo el archivo Makefile para facilitar la compilacion 
+-Se crearon el archivo README e INSTALL
+
+
+1.0.2 (17-11-2016)
+Agregados
+-Se modifico la respuesta a la sentencia "bajarservidor", este ahora espera
+que todos los clientes se desconecten para terminar el proceso padre
+-Se agrego la carga en memoria del listado de tablas que se van a manejar, no los datos de esas tablas
+-Se detecto que es requerida la migracion a multithread para facilitar el manejo de la estructura de datos concurrentemente(para evitar
+ memoria compartida), se vera en la proximas versiones.
+
+
+
+1.0.1 (10-11-2016)
+Correcciones
+-Cuando se ejecutaba el comando "salir" en el cliente, este salia, pero el proceso hijo que 
+manejaba su conexion en el servidor quedaba loopeando, esto se soluciono.
+Agregados
+-Se modifico el mecanismo de IPC, se usa sockets en lugar de pipes.
+-Se agrego la sentencia "bajarservidor", que cierra el proceso que queda a la espera de nuevas conexiones.
+
+
+

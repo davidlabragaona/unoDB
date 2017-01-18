@@ -1,0 +1,32 @@
+Una vez descomprimido, desde el directorio raiz del proyecto hay 3 formas de compilacion :
+
+-Compila todo
+make
+
+-Compila solo cliente
+make cliente
+
+-Compila solo servidor
+make servidor
+
+Borrar ejecutables anteriores
+-make clean
+
+Los ejecutables se guardan en el directorio raiz del proyecto
+
+Para ejecutar , estando en el directorio raiz del proyecto:
+
+el cliente se ejecuta
+
+./cliente IP_SERVIDOR
+
+y el servidor 
+
+./servidor
+
+
+Podria haber un make install que compile y guarde los ejecutables en /bin
+para ser ejecutados desde cualquier lugar, pero necesitas ser root y ademas los
+ archivos de las tablas y definicion de tablas deben reubicarse corectamente,
+ por ejemplo en /var/lib/unoDb y el servidor deberia leer de ahi directamente,
+esto queda pendiente de realizacion.

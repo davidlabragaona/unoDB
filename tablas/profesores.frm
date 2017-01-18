@@ -1,0 +1,2 @@
+matricula	numero
+nombre	cadena
